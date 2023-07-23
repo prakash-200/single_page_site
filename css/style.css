@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Rubik&family=Source+Sans+Pro:wght@600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+#home{
+    background-color: rgb(51, 121, 98);
+    background-image: url('../images/bg_image.jpg');
+    overflow: hidden; 
+    background-size: 100%;
+    opacity: .9;
+}
+
+#service{
+    background-image: url("../images/bg1.jpg");
+    /* background-color: #F3F3F3; */
+    overflow: hidden;
+    background-size: 100%;  
+} 
+
+#courses{
+    background-image: url("../images/bg1.jpg");
+    overflow: hidden;
+    background-size: 100%; 
+}
+
+#about{
+    background-image: url("../images/bg1.jpg");
+    overflow: hidden;
+    background-size: 100%; 
+}
+
+#contact{
+    background-image: url("../images/bg1.jpg");
+    overflow: hidden;
+    background-size: 100%; 
+}
+
+header{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    position: fixed; /* ---- used to fix the nav bar as common to all section  ---- */
+}
+
+/*  ----- nav bar logo section --------*/
+
+#nav_icon{
+    color: white;
+    font-size: xx-large;
+
+    
+}
+
+#menu{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#menu li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: coral;
+    margin: auto;
+    display: block;
+}
+
+#menu li a:hover::after{
+    width: 100%;
+    margin-top: 3px;
+}
+
+#menu li a:hover{
+    color: coral;
+}
+
+
+
+#nav_logo{
+    color: white;
+    position: relative;
+    left: 10px;
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+} 
+
+header{
+    z-index: 2;
+}
+
+#more_icon{
+    position: absolute;
+    left: 30px;
+    color: white;
+    font-size: x-large;
+    opacity: .9;
+}
+
+/*  ------ end ---------  */
+
+#menu li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+#menu li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/*  --------- home para content ------ */
+
+/*  index page start */
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.cols{
+    position: relative;
+    top: 20px;
+    width: 50%;
+}
+
+.round{
+    height: 200px;
+    width: 250px;
+    position: absolute;
+    top: 400%;
+    left: 10px;
+    z-index: 5px;
+}
+
+.topline{
+    display: block;
+    position: relative;
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 5px;
+    color: #bcc6ccc7;
+    top: -55px;
+    left: -70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topline::after{
+    position: absolute;
+    font-weight: bolder;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 5px;
+    background-color: white;
+}
+
+h1{
+     display: block; 
+    font-size: 4em;
+    font-weight: 10px;
+    color: #3d535f;
+    position: absolute;
+    left: -40px;
+    top: -45px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.multitext{
+    /* color: rgb(231,83,14); */
+    background: linear-gradient(to left,
+                    violet,
+                    indigo,
+                    blue,
+                    green,
+                    yellow,
+                    orange,
+                    red);
+            -webkit-background-clip: text;
+            color: transparent;
+    text-transform: capitalize;
+    opacity: .9;
+    animation: get 1s steps(5,start) infinite;
+    /* animation-iteration-count: infinite;
+    transition: 1s; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@keyframes get {
+    /* from{transform: scale(2);}
+    to{transform: scale(2);} */
+    to{visibility: hidden;}
+}
+
+.round{
+    height: 70%;
+    width: 90%;
+    position: absolute;
+    top: -180px;
+    left: -290px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+p{
+    display: block;
+    width: 90%;
+    font-size: 1em;
+    padding: 5px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-left: -1px;
+    color: #bcc6ccc7;
+}
+
+.btns{
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+
+button{
+    position: absolute;
+    bottom: -75px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 100;
+    font-weight: 400;
+    color: #fff;
+    background-color: #3d535f;
+    padding: 0px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgb(0,0,0,0.4);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover{
+    background-color: #7f00ff;
+}
+
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -40px;
+}
+
+.imgbox img{
+    position: relative;
+    height: 600%;
+    width: 60%;
+    top: 70px;
+    left: 60px;
+    opacity: .9;
+    animation: animateUser 4s linear infinite;
+}
+
+/* @keyframes animateUser {
+    50%{
+        right: -4px;
+        top: 4px;
+
+    }
+} */
+
+.imgbox #splash{
+    height: 200%;
+    width: 50%;
+    position: absolute;
+    top: -1%;
+    left: -15%;
+    width: 120%;
+    filter: saturate(200%);
+    animation: animate 4s linear infinite;
+}
+
+/* @keyframes animate {
+    50%{
+        right: -4px;
+        top: 4px;
+
+    }
+} */
+/* index page end */
+
+.home_para{
+    
+    position: absolute;
+    top: 170px;
+    left: 100px;
+    height: 25  0px;
+    width: 900px;
+    
+}
+
+.home_para p{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    right: 100px;
+    font-size: 50px;
+    font-weight: bold;
+       /* background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+    
+    color: rgba(211, 211, 211, 0.951);
+    text-shadow: .1em .1em 0 hsl(200, 32%, 51%);
+      
+}
+
+/* --------- end  ---------- */
+
+/* --------- get started button ----------- */
+#get_btn{
+    position: absolute;
+    top: 400px;
+    right: 350px;
+    height: 30px;
+    width: 150px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    margin-left: 0px;
+    padding-right: 20px;
+    color: white;
+    background-color: rgb(96, 210, 96);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: bold;
+    border: 1px solid red;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+}
+
+#get_icon{
+    position: absolute;
+    top: 407px;
+    right: 362px;
+    font-weight: bold;
+    font-size: large;
+}
+
+/* .serv{
+    background-image: url("../images/bg1.jpg");
+    overflow: hidden;
+    background-size: 100%;
+    opacity: .8;
+} */
+
+
+/*  contact page css start */
+.contact-info{
+    color: white;
+    font-size: 10px;
+    margin-top: 120px;
+    margin-left: 200px;
+    line-height: 300%;
+}
+
+.cnt-us{
+    position: relative;
+    top: -20px;
+    left: -30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.card1{
+    height: 330px;
+    width: 250px;
+    background-color: #FFFFFF;
+    color: white;
+    position: relative;
+    left: 600px;
+    top: -320px;
+    border-radius: 10px;
+    opacity: .8;
+}
+
+.card1 p{
+    position: absolute;
+    top: -5px;
+    color: black;
+    left: 25px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 2;
+}
+
+input{
+        margin-left: 11%;
+        padding-top: 10px;
+        margin-top: 50px;
+        border-color: #F3F3F3;
+        border-top-color:10px solid #F3F3F3;
+        border-width: 1px;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+}
+
+textarea{
+    margin-left: 11%;
+    width: 200px;
+    height: 100px;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+}
+
+::placeholder{
+    position: relative;
+    left: 5px;
+    bottom: 4px;
+    color: black;
+}
+
+.cnt-btn{
+    border-radius: 5px;
+    border: none;
+    color: white;
+    text-align: center;
+    height: 30px;
+    width: 80px;
+    font-size: 60%;
+    bottom: 10px;
+}
+
+.cnt-email{
+    position: absolute;
+    top: 40px;
+}
+.cnt-sub{
+    position: absolute;
+    top: 80px;
+}
+
+.cnt-mess{
+    position: absolute;
+    top: 160px;
+}
+
+.cnt-site{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    top: -10px;
+}
+.cnt-btn{
+    position: absolute;
+    top: 240px;
+    padding-top: 2px;
+}
+
+.fa-location-dot{
+    position: absolute;
+    left: 170px;
+    margin-top: 7px;
+    font-size: large;
+    /* top: 10px;
+    background-color: aqua; */
+}
+
+.fa-phone{
+    position: absolute;
+    left: 170px;
+    margin-top: 8px;
+    font-size: large;
+}
+
+.fa-paper-plane{
+    position: absolute;
+    left: 170px;
+    margin-top: 8px;
+    font-size: large;
+}
+
+.fa-earth-americas{
+    position: absolute;
+    left: 170px;
+    margin-top: 8px;
+    font-size: large;
+}
+
+.contact-info h2{
+    color: #625F70;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contact-info p{
+    margin-top: -10px;
+}
+/* end  */
+
+/* Services page start*/
+.content{
+    height: 70%;
+    width: 80%;
+    position: absolute;
+    top: 500px;
+    left: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* animation: move 2s ease-in; */
+
+}
+
+/* .serv1{
+    animation: movex 2s;
+    transition: 2s;
+}
+@keyframes movex {
+    from{
+        transform: translateX(500px);
+    }
+    to{
+        transform: translateX(-500px);
+    }
+}  */
+
+.lang-img{
+    filter: contrast(50%);
+}
+
+.serv1,.serv2,.serv3,.serv4{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.serv1{
+    height: 250px;
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+    /* opacity: .1; */
+    margin-top: 50px;
+}
+
+.serv2{
+    height: 250px;
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+    /* opacity: .1; */
+    margin-bottom: 50px;
+}
+
+.serv3{
+    height: 230px;
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+    /* opacity: .1; */
+    margin-top: 50px;
+}
+
+.serv4{
+    height: 230px;
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+    /* opacity: .1; */
+    margin-bottom: 30px;
+}
+
+.serv1:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+.serv2:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+.serv3:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+.serv4:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+.serv1 h3{
+    position: relative;
+    left: -2px;
+}
+
+.serv2 h3{
+    position: relative;
+    left: -10px;
+}
+
+.serv3 h3{
+    position: relative;
+    left: -12px;
+}
+
+.serv4 h3{
+    position: relative;
+    left: -3px;
+}
+
+.lang-img{
+    height: 80px;
+    width: 100%;
+}
+
+.framework-img{
+    height: 80px;
+    width: 100%;
+}
+
+.tools-img{
+    height: 80px;
+    width: 100%;
+}
+
+.internship-img{
+    height: 80px;
+    width: 100%;
+}
+
+.content h3{
+    margin-left: 25px;
+}
+
+.content p{
+    margin-top: -1px; 
+    padding: 0px 10px;
+    font-size: x-small;
+    letter-spacing: 2px;
+    line-height: 15px;
+    color: darkblue;
+    margin-top: 2px;
+}
+
+.reg{
+    position: relative;
+    top: -15px;
+    border-radius: 50px;
+    width: 70%;
+    height: 30px;
+    left: 15px;
+    font-size: small;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    animation: blk 2s steps(5,start) infinite;
+}
+@keyframes  blk{
+    to{visibility: hidden;}
+}
+
+.reg-1{
+    /* margin-bottom: 100px; */
+    position: relative;
+    bottom: 10px;
+}
+
+.reg-2{
+    margin-top: 55px;
+}
+
+.reg-3{
+    margin-top: 35px;
+}
+
+.reg-4{
+    margin-top: 20px;
+}
+
+.tools-img,.internship-img{
+    position: relative;
+    top: -20px;
+}
+
+.content:hover{
+    transform: translate(0px,-8px);
+}
+/* Services page end*/
+
+/* About page start */
+
+.abt-site{
+    /* background-color: white; */
+    height: 200px;
+    width: 500px;
+    margin-left: -200px;
+    color: #fff;
+    
+}
+
+.abt-logo{
+    display: inline-flex;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 100px;
+
+}
+
+.abt-logo h4{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: xx-large;
+    position: relative;
+    right: 40px;
+    top: 10px;
+    text-shadow: 4px 4px 3px rgba(191, 224, 219, 1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.abt-site h2{
+    margin-left: 10px;
+    color: blanchedalmond;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.abt-site{
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.abt-crs,.abt-proj,.abt-rate{
+    position: relative;
+    top: 30px;
+    left: -60px;
+    display: flex;
+}
+
+.fa-graduation-cap,.fa-award,.fa-heart-pulse{
+    font-size: 200%;
+    margin-left: 30px;
+}
+
+.abt-rate{
+    position: relative;
+    left: 50px;
+}
+
+.abt-proj{
+    position: relative;
+    left: 3px;
+}
+
+.num{
+    height: 80px;
+    width: 80px;
+    background-color: gainsboro;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    border-radius: 100px;
+    border: 2px solid whitesmoke;
+    color: orangered;
+    text-align: center;
+    text-align-last: auto;
+    vertical-align: baseline;
+    padding-top: 50px;
+    font-size: x-large;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
